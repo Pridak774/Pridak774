@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sever Silaghi - Investment &amp; Business Innovations</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Immediate script to ensure text is visible -->
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        // Force no overlay blocking content
+        const overlay = document.getElementById("glitchOverlay");
+        if (overlay) {
+          overlay.style.opacity = "0";
+          overlay.style.pointerEvents = "none";
+        }
+        // Make all sections visible immediately
+        document.querySelectorAll("section").forEach(function (section) {
+          section.style.opacity = "1";
+        });
+      });
+    </script>
+
+    <!-- Google Fonts - Added improved monospace fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <!-- Main Script -->
+    <script src="script.js" defer></script>
+  </head>
+  <body class="code-theme">
+    <!-- Custom Cursor Element (visible on desktop only) -->
+    <div id="customCursor"></div>
+
+    <!-- Floating Theme Selector -->
+    <div class="floating-theme-selector">
+      <button class="toggle-theme-panel" id="toggleThemePanel">
+        <i class="fas fa-palette"></i>
+      </button>
+      <div class="theme-panel" id="themePanel">
+        <div class="color-option color-cyan" data-theme="cyan"></div>
+        <div class="color-option color-green" data-theme="green"></div>
+        <div class="color-option color-purple" data-theme="purple"></div>
+        <div class="color-option color-orange" data-theme="orange"></div>
+      </div>
+    </div>
+
+    <!-- Sticky Navigation Bar -->
+    <nav id="navbar">
+      <div class="nav-container center-aligned">
+        <div class="hamburger-menu" id="hamburgerMenu">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#introduction">About</a></li>
+          <li><a href="#milestones">Timeline</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#assistant">AI Assistant</a></li>
+          <li><a href="#business-portfolio">Portfolio</a></li>
+          <li><a href="#technology-overview">Technology</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <button id="themeToggle"><i class="fas fa-adjust"></i></button>
+          </li>
+          <li>
+            <button id="navColorToggle" title="Change Theme Colors">
+              <i class="fas fa-palette"></i>
+            </button>
+          </li>
+        </ul>
+
+        <!-- Navbar Color Theme Dropdown -->
+        <div class="nav-color-dropdown" id="navColorDropdown">
+          <div class="nav-color-option nav-color-cyan" data-theme="cyan"></div>
+          <div
+            class="nav-color-option nav-color-green"
+            data-theme="green"
+          ></div>
+          <div
+            class="nav-color-option nav-color-purple"
+            data-theme="purple"
+          ></div>
+          <div
+            class="nav-color-option nav-color-orange"
+            data-theme="orange"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Breaking News Style Ticker for Mobile - Enhanced -->
+      <div class="news-ticker mobile-only">
+        <div class="ticker-content">
+          <span class="ticker-item">
+            <span class="code-keyword">const</span>
+            <span class="code-var">energyStorage</span> =
+            <span class="code-keyword">new</span>
+            <span class="code-class">Battery</span>(<span class="code-num"
+              >500</span
+            >, <span class="code-str">'lithium'</span>);
+          </span>
+          <span class="ticker-item">
+            <span class="code-keyword">async</span>
+            <span class="code-func">function</span>
+            <span class="code-var">mintTokens</span>() {
+            <span class="code-keyword">await</span>
+            <span class="code-var">blockchain</span>.<span class="code-func"
+              >connect</span
+            >(); }
+          </span>
+          <span class="ticker-item">
+            <span class="code-keyword">class</span>
+            <span class="code-class">PVSystem</span> {
+            <span class="code-func">constructor</span>(<span class="code-var"
+              >capacity</span
+            >) { <span class="code-keyword">this</span>.<span class="code-var"
+              >kwp</span
+            >
+            = <span class="code-var">capacity</span>; } }
+          </span>
+          <span class="ticker-item">
+            <span class="code-comment"
+              >// Trading Energy on Decentralized Grid</span
+            >
+          </span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Glitch Intro Overlay with Typewriter Effect -->
+    <div id="glitchOverlay">
+      <div id="glitchText" class="glitch" data-text=""></div>
+    </div>
+
+    <!-- Background Particle Animation Canvas -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- Main Content Container -->
+    <div class="container">
+      <!-- About / Bio Section -->
+      <section id="introduction">
+        <!-- Blockchain Theme Selector -->
+        <div class="blockchain-theme-selector">
+          <span class="blockchain-theme-title">Theme:</span>
+          <div class="blockchain-color-options">
+            <div
+              class="blockchain-color-option blockchain-color-cyan active"
+              data-theme="cyan"
+            ></div>
+            <div
+              class="blockchain-color-option blockchain-color-green"
+              data-theme="green"
+            ></div>
+            <div
+              class="blockchain-color-option blockchain-color-purple"
+              data-theme="purple"
+            ></div>
+            <div
+              class="blockchain-color-option blockchain-color-orange"
+              data-theme="orange"
+            ></div>
+          </div>
+        </div>
+
+        <!-- Blockchain animation with fixed structure -->
+        <div class="blockchain-animation">
+          <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+            <!-- ...existing code... -->
+
+            <!-- Block 1 - Genesis Block (Energy Network Initialization) -->
+            <g class="blockchain-block">
+              <rect
+                class="block block-verified"
+                x="100"
+                y="100"
+                width="120"
+                height="80"
+                rx="5"
+                ry="5"
+              >
+                <animate
+                  attributeName="stroke-width"
+                  values="2;3;2"
+                  dur="3s"
+                  repeatCount="indefinite"
+                />
+              </rect>
+              <text class="block-text" x="110" y="120">ENERGY NETWORK</text>
+              <text class="block-text" x="110" y="135">
+                INIT CAPACITY: 500MW
+              </text>
+              <text class="hash-value" x="110" y="150">0x000bfc3a...</text>
+              <text class="block-text" x="110" y="165">GRID: OPERATIONAL</text>
+              <circle class="tactical-marker" cx="210" cy="110" r="8">
+                <animate
+                  attributeName="r"
+                  values="6;9;6"
+                  dur="2s"
+                  repeatCount="indefinite"
+                />
+              </circle>
+            </g>
+
+            <!-- Block 2 (Solar Energy Transaction) -->
+            <g class="blockchain-block">
+              <rect
+                class="block block-verified"
+                x="300"
+                y="100"
+                width="120"
+                height="80"
+                rx="5"
+                ry="5"
+              >
+                <animate
+                  attributeName="opacity"
+                  values="0.8;1;0.8"
+                  dur="4s"
+                  repeatCount="indefinite"
+                />
+              </rect>
+              <text class="block-text" x="310" y="120">SOLAR ENERGY TX</text>
+              <text class="block-text" x="310" y="135">150KWH @ €0.12/KWH</text>
+              <text class="hash-value" x="310" y="150">0x7ae56f2b...</text>
+              <text class="block-text" x="310" y="165">
+                SOURCE: PV ARRAY #42
+              </text>
+            </g>
+
+            <!-- Block 3 (Wind Energy Transaction) -->
+            <g class="blockchain-block">
+              <rect
+                class="block block-verified"
+                x="500"
+                y="100"
+                width="120"
+                height="80"
+                rx="5"
+                ry="5"
+              >
+                <animate
+                  attributeName="stroke-dasharray"
+                  values="0;5;0"
+                  dur="5s"
+                  repeatCount="indefinite"
+                />
+              </rect>
+              <text class="block-text" x="510" y="120">WIND ENERGY TX</text>
+              <text class="block-text" x="510" y="135">280KWH @ €0.09/KWH</text>
+              <text class="hash-value" x="510" y="150">0x3df78a12...</text>
+              <text class="block-text" x="510" y="165">
+                SOURCE: OFFSHORE #17
+              </text>
+            </g>
+
+            <!-- ...existing code... -->
+          </svg>
+        </div>
+
+        <!-- Animated Energy Stats Banner - Fixed Structure -->
+        <div class="energy-stats-banner">
+          <div class="stat-item">
+            <i class="fas fa-solar-panel fa-pulse"></i>
+            <span class="stat-value">487.2 MWh</span>
+            <span class="stat-label">Solar Generation</span>
+          </div>
+          <div class="stat-item">
+            <i class="fas fa-wind animated-wind"></i>
+            <span class="stat-value">315.8 MWh</span>
+            <span class="stat-label">Wind Generation</span>
+          </div>
+          <div class="stat-item">
+            <i class="fas fa-bolt animated-bolt"></i>
+            <span class="stat-value">€0.112/kWh</span>
+            <span class="stat-label">Avg Price</span>
+          </div>
+          <div class="stat-item">
+            <i class="fas fa-exchange-alt animated-exchange"></i>
+            <span class="stat-value">2,458</span>
+            <span class="stat-label">Transactions Today</span>
+          </div>
+        </div>
+
+        <!-- Heading with Color and B&W Toggle Buttons -->
+        <div class="heading-container">
+          <h2 class="terminal-heading">&gt; About Sever Silaghi</h2>
+          <div class="toggle-buttons">
+            <button id="colorToggle" title="Change Accent Color">
+              <i class="fas fa-palette"></i>
+            </button>
+            <button id="bwToggle" title="Switch to Black & White Mode">
+              <i class="fas fa-adjust"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Timeline / Milestones Section -->
+      <section id="milestones">
+        <h2 class="terminal-heading">&gt; Timeline &amp; Milestones</h2>
+        <ul class="timeline-list">
+          <li>
+            <span class="code-indicator">[2018]</span> Forged strategic
+            partnerships in the green energy sector.
+          </li>
+          <li>
+            <span class="code-indicator">[2019]</span> Secured innovative
+            patents in energy storage and trading.
+          </li>
+          <li>
+            <span class="code-indicator">[2020]</span> Launched transformative
+            tech initiatives globally.
+          </li>
+          <li>
+            <span class="code-indicator">[2021]</span> Recognized for
+            groundbreaking sustainable technology investments.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Testimonials / Partners Section -->
+      <section id="testimonials">
+        <h2 class="terminal-heading">&gt; Testimonials &amp; Partners</h2>
+        <div class="testimonials-container">
+          <div class="testimonial">
+            <p class="code-text">
+              "Sever Silaghi's vision and execution in the renewable energy
+              sector are unparalleled."
+            </p>
+            <div class="testimonial-source">— GreenTech Magazine</div>
+          </div>
+          <div class="testimonial">
+            <p class="code-text">
+              "Innovative, reliable, and forward-thinking — Sever leads the
+              change in sustainable investments."
+            </p>
+            <div class="testimonial-source">— Energy Leaders</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI Assistant Section -->
+      <section id="assistant">
+        <h2 class="terminal-heading">&gt; AI Assistant</h2>
+        <div class="content-box">
+          <p class="system-message">
+            [SYSTEM]: Ask our AI assistant for insights:
+          </p>
+          <input
+            type="text"
+            id="assistantInput"
+            placeholder="Type your question..."
+          />
+          <button id="assistantButton">Ask <i class="fas fa-robot"></i></button>
+          <div id="assistantResponse" class="code-response"></div>
+        </div>
+      </section>
+
+      <!-- Business Portfolio Section -->
+      <section id="business-portfolio">
+        <h2 class="terminal-heading">&gt; Business Portfolio</h2>
+        <div class="cards-container">
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-solar-panel"></i></div>
+            <h3 class="card-title">[GreenEnergy]</h3>
+            <p class="code-text">Advanced investments in solar technology.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-battery-full"></i></div>
+            <h3 class="card-title">[EnergyTrading]</h3>
+            <p class="code-text">Innovative strategies in energy markets.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+            <h3 class="card-title">[TechDevelopment]</h3>
+            <p class="code-text">Shaping digital transformation initiatives.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-link"></i></div>
+            <h3 class="card-title">[BlockchainTech]</h3>
+            <p class="code-text">
+              Implementing secure, transparent infrastructures.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technology Overview Section -->
+      <section id="technology-overview">
+        <h2 class="terminal-heading">&gt; Technology Overview</h2>
+        <ul class="tech-list">
+          <li>Robust R&amp;D in renewable energy.</li>
+          <li>Data-driven analytics for energy trading.</li>
+          <li>Cutting-edge technologies for digital marketing.</li>
+          <li>Blockchain integration for enhanced security.</li>
+        </ul>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <h2 class="terminal-heading">&gt; Contact</h2>
+        <form id="contactForm" action="#" method="post">
+          <div class="form-group">
+            <label for="name">name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            SEND_MESSAGE <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="siteFooter">
+      <p class="code-text">&copy; 2025 Sever Silaghi. All rights reserved.</p>
+      <div class="social-links">
+        <a
+          href="https://twitter.com/yourprofile"
+          target="_blank"
+          aria-label="Twitter"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a
+          href="https://linkedin.com/in/yourprofile"
+          target="_blank"
+          aria-label="LinkedIn"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </div>
+    </footer>
+  </body>
+</html>
